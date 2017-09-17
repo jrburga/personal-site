@@ -2,15 +2,13 @@ import React, { Component } from 'react';
 import Table from '../components/table.js'
 
 const axios = require('axios');
-const csv = require('csv');
 
 // const blockspring = require('blockspring');
 
 let residents;
 
 const header = ['Name', 'Kerberos']
-
-axios.get('jrburga.scripts.mit.edu/index.py')
+axios.get('/sql.py')
 	.then(function (response) {
 		console.log(response.data)
 	 })
